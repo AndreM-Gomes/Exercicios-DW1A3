@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+</head>
+<body>
+  <h1>Informações Pessoais</h1>
+  <form action="post">
+    <label for="nome">
+      Nome
+      <input type="text" name="nome" id="nome">
+    </label>
+    <p>
+      Sexo
+      <label for="masculino">
+        masculino
+        <input type="radio" name="sexo" id="masculino" value="masculino">
+      </label>
+      <label for="feminino">
+        feminino
+        <input type="radio" name="sexo" id="feminino" value="feminino">
+      </label>
+    </p>
+    <label for="situacao">
+      Situacao
+      <select name="situacao" id="situacao">
+        <option value="solteiro">Solteiro</option>
+        <option value="casado">Casado</option>
+        <option value="divorciado">Divorciado</option>
+        <option value="outro">Outro</option>
+      </select>
+    </label>
+    <p>Requisitos atendidos</p>
+    <ul>
+      
+      <li>
+        <label for="ensino-superior">
+          Ensino Superior
+          <input type="checkbox" name="ensino-superior" id="ensino-superior">
+        </label>
+      </li>
+      <li>
+        <label for="certificado-linux">
+          Certificação Linux 
+          <input type="checkbox" name="certificado-linux" id="certificado-linux">
+        </label>
+      </li>
+      <li>
+        <label for="certificado-arquiteto-java">
+          Certificado Arquiteto Java
+          <input type="checkbox" name="certificado-arquiteto-java" id="certificado-arquiteto-java">
+        </label>
+      </li>
+    </ul>
+    <label for="foto">
+      Envie uma foto 3x4
+      <input type="file" name="foto" id="foto">
+    </label>
+    <p>
+      <input type="submit" value="Enviar">
+    </p>
+  </form>
+</body>
+</html>
