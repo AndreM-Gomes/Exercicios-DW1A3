@@ -1,0 +1,94 @@
+body{
+    width: 200px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "ac porcent multip div"
+    "sete oito nove igual"
+    "quatro cinco seis menos"
+    "um dois tres soma"
+    "zero zero ponto soma"
+    ;
+    row-gap: 5px;
+}
+input{
+    width: 225px;
+}
+.tecla{
+    border: 1px solid black;
+    background-color: rgb(201, 201, 201);
+    padding: 20px;
+    margin: 5px;
+    width: 10px;
+    height: 10px;
+}
+.ac{
+    grid-area: ac;
+}
+
+.porcent{
+    grid-area: porcent;
+}
+
+.multip{
+    grid-area: multip;
+}
+
+.div{
+    grid-area: div;
+}
+
+.sete{
+    grid-area: sete;
+}
+
+.oito{
+    grid-area: oito;
+}
+
+.nove{
+    grid-area: nove;
+}
+
+.igual{
+    grid-area: igual;
+}
+
+.quatro{
+    grid-area: quatro;
+}
+
+.cinco{
+    grid-area: cinco;
+}
+
+.seis{
+    grid-area: seis;
+} 
+.menos{
+    grid-area: menos;
+}
+
+.um{
+    grid-area: um;
+} 
+.dois{
+    grid-area:dois;
+}
+.tres{
+    grid-area: tres;
+} 
+.soma{
+    grid-area: soma;
+    height: 80px !important;
+}
+.zero{
+    grid-area: zero;
+    width: 70px !important;
+}
+.ponto{
+    grid-area: ponto;
+}
