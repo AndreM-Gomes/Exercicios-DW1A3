@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo do peso ideal</title>
+</head>
+
+<body>
+    <h1>Programa Cálculo do Peso Ideal</h1>
+    <p>
+        <label for="nome">
+            Nome:
+            <input type="text" name="nome" id="nome">
+        </label>
+    </p>
+    <p>
+        Sexo:
+        <label for="sexo-feminino">
+            Masculino
+            <input type="radio" name="sexo" values="masculino" id="sexo-masculino">
+        </label>
+        <label for="sexo-masculino">
+            Feminino
+            <input type="radio" name="sexo" values="feminino" id="sexo-feminino">
+        </label>
+    </p>
+    <p>
+        <label for="altura">
+            Altura:
+            <input type="text" name="altura" id="altura">
+        </label>
+    </p>
+    <p>
+        <button id="calcular-campos">Calcular Peso Ideal</button>
+        <button id="limpar-campos">Limpar Campos</button>
+    </p>
+</body>
+<script>
+    const nome = document.getElementById('nome')
+    const masculino = document.getElementById('sexo-masculino')
+    const feminino = document.getElementById('sexo-feminino')
+    const altura = document.getElementById('altura')
+    const botaoCalcular = document.getElementById('calcular-campos')
+    const botaoLimpar = document.getElementById('limpar-campos')
+
+    botaoCalcular.addEventListener('click', event => {
+        if (masculino.checked) {
+            alert(`${nome.value}, seu peso ideal seria ${22 * Math.pow(altura.value, 2)}Kg`)
+        }
+        if (feminino.checked) {
+            alert(`${nome.value}, seu peso ideal seria ${21 * Math.pow(altura.value, 2)}Kg`)
+        }
+    })
+    botaoLimpar.addEventListener('click', evento => {
+        nome.value = ''
+        masculino.checked = false
+        feminino.checked = false
+        altura.value = ''
+    })
+</script>
+
+</html>

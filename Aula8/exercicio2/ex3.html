@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parquímetro</title>
+</head>
+
+<body>
+    <p>
+        <label for="parquimetro">
+            Insira suas moedas:
+            <input type="text" name="parquimetro" id="parquimetro">
+        </label>
+        <button id="inserir">Inserir</button>
+    </p>
+</body>
+<script>
+    const parquimetro = document.getElementById('parquimetro')
+    const botaoInserir = document.getElementById('inserir')
+
+    botaoInserir.addEventListener('click', evento => {
+        if (parquimetro.value < 1) {
+            alert('Valor insuficiente')
+        }
+        if (parquimetro.value >= 1 && parquimetro.value < 1.75) {
+            alert(`Você tem 30 minutos. Troco:${parquimetro.value - 1}`)
+        }
+        if (parquimetro.value >= 1.75 && parquimetro.value < 3) {
+            alert(`Você tem 60 minutos. Troco:${parquimetro.value - 1.75}`)
+        }
+        if (parquimetro.value >= 3) {
+            alert(`Você tem 120 minutos. Troco:${parquimetro.value - 3}`)
+        }
+
+    })
+</script>
+
+</html>

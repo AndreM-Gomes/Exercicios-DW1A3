@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Chinchilas</title>
+</head>
+
+<body>
+    <h1>Calculadora de Chinchilas</h1>
+    <p>
+        <label for="chinchilas">
+            Número inicial de chinchilas
+            <input type="text" name="chinchilas" id="chinchilas">
+        </label>
+    </p>
+    <p>
+        <label for="anos">
+            Quantidade de anos
+            <input type="text" name="anos" id="anos">
+        </label>
+    </p>
+    <p>
+        <button id="calcular-chinchilas">Calcular Chinchilas</button>
+    </p>
+</body>
+<script>
+    const anos = document.getElementById('anos')
+    const chinchilas = document.getElementById('chinchilas')
+    const calcularChinchilas = document.getElementById('calcular-chinchilas')
+
+    calcularChinchilas.addEventListener('click', event => {
+        let quantidadeChinchilas = chinchilas.value;
+        if (quantidadeChinchilas < 2) {
+            alert('O número inicial de chinchilas deve ser maior ou igual a 2')
+        } else {
+            for (let i = 1; i <= anos.value; i++) {
+                alert(`Número previsto de chinchilas no ano ${i}: ${quantidadeChinchilas}`)
+                quantidadeChinchilas = quantidadeChinchilas * 3
+            }
+        }
+    })
+</script>
+
+</html>

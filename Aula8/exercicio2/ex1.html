@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante JS</title>
+</head>
+
+<body>
+    <h1>Restaurante JS</h1>
+    <p>
+        <label for="preco">
+            Buffet por Quilo R$
+            <input type="text" name="preco" id="preco">
+        </label>
+    </p>
+    <p>
+        <label for="gramas">
+            Consumo do Cliente (gr):
+            <input type="text" name="gramas" id="gramas">
+        </label>
+    </p>
+    <button id="calcular-preco">Calcular preço</button>
+</body>
+<script>
+    const botao = document.getElementById('calcular-preco')
+    const preco = document.getElementById('preco')
+    const gramas = document.getElementById('gramas')
+    botao.addEventListener('click', (event) => {
+        alert(`Valor a ser pago: R\$${preco.value * gramas.value}`)
+    })
+</script>
+
+</html>
